@@ -67,7 +67,7 @@ class ExpressionValidator {
 		 */
 		bool readSymbol(char symbol) {
 
-			if (isdigit(symbol) || (currentState != 1 && isVariable(symbol))) {
+			if (isdigit(symbol) || isVariable(symbol)) {
 				// Expect numbers to consist of multiple digits but expect
 				// variable names to be only one character in length
 				currentState = 1;
