@@ -6,6 +6,7 @@
 #include <set>
 #include <stack>
 #include <string>
+#include <fstream>
 using namespace std;
 
 // A pushdown automaton used to validate arithmetic expressions
@@ -134,7 +135,21 @@ class ExpressionValidator {
 int main() {
 
 	ExpressionValidator validator;
+	string line;
+	ifstream readIn ("expressions.txt");
+	if (readIn.is_open()){
+		while ( getline (readIn,line) ){
+			cout << "Read In This Expression: " << line << endl;
+			if(validator.validateExpr(line)){
+				cout << "Expression is syntactically correct" << endl;
+			}
+			else cout << "Expression is not an arithmetic expression" << endl;
+		}
+		readIn.close();
+	}
+	else cout << "Unable to open file" << endl; 
 
+	
+	readIn.close();
 	return 0;
-
 }
