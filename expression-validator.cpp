@@ -86,8 +86,7 @@ class ExpressionValidator {
 			} else if (currentState == 2 && (isdigit(symbol) || isVariable(symbol))) {
 				// Expect numbers or variables to follow operators
 				currentState = 1;
-			} else if (symbol != ' ') {
-				// Ignore spaces
+			} else {
 				return false;
 			}
 
@@ -147,9 +146,9 @@ int main() {
 		}
 		readIn.close();
 	}
-	else cout << "Unable to open file" << endl; 
+	else cout << "Unable to open file" << endl;
 
-	
+
 	readIn.close();
 	return 0;
 }
