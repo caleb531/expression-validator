@@ -8,4 +8,4 @@ To execute the compiled program, run:
 $ ./expression-validator.out
 
 Expression Formatting: 
-Spaces are ignored and only one expression per line can be read from the expressions.txt
+Spaces are prohibited and only one expression per line can be read from the expressions.txt
