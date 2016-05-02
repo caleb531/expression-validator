@@ -7,5 +7,6 @@ $ g++ expression-validator.cpp -o expression-validator.out
 To execute the compiled program, run:
 $ ./expression-validator.out
 
-Expression Formatting: 
-Spaces are prohibited and only one expression per line can be read from the expressions.txt
+The program reads expressions from expressions.txt (one expression per line).
+Spaces within any of the input expressions are prohibited and rejected by the
+parser.
