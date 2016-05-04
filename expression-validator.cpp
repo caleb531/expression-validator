@@ -125,8 +125,6 @@ class ExpressionValidator {
 				return false;
 			}
 
-			return false;
-
 		}
 
 };
