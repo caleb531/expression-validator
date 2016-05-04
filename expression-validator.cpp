@@ -111,7 +111,7 @@ class ExpressionValidator {
 				if (!readSymbol(expression[c])) {
 					// Stop reading input symbols if expression syntax is found
 					// to be invalid at any point
-					break;
+					return false;
 				}
 			}
 
