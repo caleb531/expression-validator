@@ -135,19 +135,20 @@ int main() {
 
 	ExpressionValidator validator;
 	string line;
-	ifstream readIn ("expressions.txt");
-	if (readIn.is_open()){
-		while ( getline (readIn,line) ){
-			cout << "Read In This Expression: " << line << endl;
-			if(validator.validateExpr(line)){
+	ifstream readIn("expressions.txt");
+	if (readIn.is_open()) {
+		while (getline(readIn, line)) {
+			cout << "Expression read: " << line << endl;
+			if (validator.validateExpr(line)){
 				cout << "Expression is syntactically correct" << endl;
+			} else {
+				cout << "Expression is not an arithmetic expression" << endl;
 			}
-			else cout << "Expression is not an arithmetic expression" << endl;
 		}
 		readIn.close();
+	} else {
+		cout << "Unable to open file" << endl;
 	}
-	else cout << "Unable to open file" << endl;
-
 
 	readIn.close();
 	return 0;
