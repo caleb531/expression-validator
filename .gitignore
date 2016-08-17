@@ -12,3 +12,5 @@ Thumbs.db
 *.out
 # Stack dump
 *.stackdump
+# User environment variables
+.env
