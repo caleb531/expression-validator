@@ -15,10 +15,10 @@ class ExpressionValidator {
 	public:
 
 		// The current state of the PDA
-        // State 0: no input read
-        // State 1: identifier (variable or digit) encountered
-        // State 2: operator encountered
-        // State 3: all input read
+		// State 0: no input read
+		// State 1: identifier (variable or digit) encountered
+		// State 2: operator encountered
+		// State 3: all input read
 		int currentState;
 		stack<char> symbolStack;
 
